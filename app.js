@@ -121,6 +121,21 @@ rl.question('Enter a file name: ', function(fileName) {
 
                             // Exit the switch
                             break;
+
+                            // If the char is a ','
+                        case ',':
+
+                            // Get a user input
+                            rl.question('Waiting for input (only one char)... ', function(char) {
+
+                                // Add the ASCII value of the char to the current cell
+                                main_array[cell] = char.charCodeAt(0);
+
+                            });
+
+                            // Exit the switch
+                            break;
+
                         default:
                             console.log('Invalid character: ' + chars[j]);
                             break;
