@@ -80,6 +80,13 @@ rl.question('Enter a file name: ', function(fileName) {
                             // Exit the switch
                             break;
 
+                        case '.':
+
+                            // Print the current cell
+                            console.log(main_array[cell]);
+
+                            // Exit the switch
+                            break;
                         default:
                             console.log('Invalid character: ' + chars[j]);
                             break;
