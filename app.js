@@ -80,6 +80,38 @@ rl.question('Enter a file name: ', function(fileName) {
                             // Exit the switch
                             break;
 
+                            // If the char is a '<'	
+                        case '<':
+
+                            // Go one cell back
+                            cell--;
+
+                            // If the cell is negative
+                            if (cell < 0) {
+
+                                // Go to the last cell
+                                cell = main_array.length - 1;
+                            }
+
+                            // Exit the switch
+                            break;
+
+                            // If the char is a '>'
+                        case '>':
+
+                            cell++;
+
+                            // If the cell is out of bounds
+                            if (cell > main_array.length - 1) {
+
+                                // Go to cell 0
+                                cell = 0;
+                            }
+
+                            // Exit the switch
+                            break;
+
+                            // If the char is a '.'
                         case '.':
 
                             // Print the current cell
