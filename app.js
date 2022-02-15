@@ -114,8 +114,10 @@ rl.question('Enter a file name: ', function(fileName) {
                             // If the char is a '.'
                         case '.':
 
-                            // Print the current cell
-                            console.log(main_array[cell]);
+                            // Make the current cell printable
+                            // Take the char to the corresponding ASCII value
+                            // Print that char out
+                            process.stdout.write(String.fromCharCode(main_array[cell]));
 
                             // Exit the switch
                             break;
